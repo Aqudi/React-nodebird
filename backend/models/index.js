@@ -7,11 +7,11 @@ const db = {};
 
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-db.Comment = requre('./comment.js')(sequelize, Sequelize);
-db.Hashtag = requre('./hashtag.js')(sequelize, Sequelize);
-db.Image = requre('./image.js')(sequelize, Sequelize);
-db.Post = requre('./post.js')(sequelize, Sequelize);
-db.User = requre('./user.js')(sequelize, Sequelize);
+db.Comment = require('./comment.js')(sequelize, Sequelize);
+db.Hashtag = require('./hashtag.js')(sequelize, Sequelize);
+db.Image = require('./image.js')(sequelize, Sequelize);
+db.Post = require('./post.js')(sequelize, Sequelize);
+db.User = require('./user.js')(sequelize, Sequelize);
 
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
