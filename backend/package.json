@@ -1,0 +1,11 @@
+{
+  "name": "nodebird_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aqudi",
+  "license": "MIT",
+  
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
