@@ -25,11 +25,11 @@ app.use(cors({
 }))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser(process.env.COOKE_SECRET));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
     saveUninitialized: false,
     resave: false,
-    secret: process.env.COOKE_SECRET,
+    secret: process.env.COOKIE_SECRET,
 }));
 app.use(passport.initialize());
 app.use(passport.session());
